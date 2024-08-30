@@ -30,7 +30,7 @@ function MenuNav({ fetchData }) {
             <ul className={style.nav}>
                 {
                 types.types.map((element, e) => 
-                <li ><Link  className= { `${localization.pathname === `/${element}` ?style.check: style.borderSlide}`  }
+                <li className= { `${localization.pathname === `/${element}` ?style.check: style.borderSlide}`  }><Link  
                          key={e} 
                          to={`/${element}`}>
                             {element.toUpperCase()} 

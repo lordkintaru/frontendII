@@ -6,9 +6,14 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+h3{
+  margin: 1px;
+}
 body{
   max-width: 100vw;
   max-height: 100vh;
+  display: flex;
+  align-items: center;
 
 }
 #root{
@@ -17,11 +22,17 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
+
+  width: 100%; /* Certifique-se de que o pai tenha uma largura definida */
+  height: 100%; /* Certifique-se de que o pai tenha uma altura definida */
  
 }
 
 :root {
-  --main-bg-color: #1C1E24;
+  --main-bg-color: #161616;
+  --main-color: rgb(241, 224, 200);
+  --main-color-dark:rgb(61, 47, 27);
 }
 
 * {
@@ -29,7 +40,14 @@ body{
   padding: 0%;
   margin: 0%;
 }
-
+html{
+  background-image: url('../public/bgGenshin.webp');
+  height: 100vh; /* Altura da tela inteira */
+  background-size: cover; /* A imagem cobre toda a área */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Não repete a imagem */
+  background-attachment: fixed; /* Fixa a imagem */
+}
 
 
 
