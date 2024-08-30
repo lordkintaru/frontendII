@@ -12,6 +12,8 @@ function App() {
         <Header fetchData={fetchDataFromAPI}/>
         <h1>sdasda</h1>
         <h2>dsaduia</h2>
+        <h1>esad</h1>
+        <h1>esad</h1> <h1>esad</h1> <h1>esad</h1> <h1>esad</h1> <h1>esad</h1>
         
       </BrowserRouter>
   

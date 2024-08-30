@@ -8,13 +8,16 @@
 .header{
     background-color: rgba(8, 8, 8, 0);
     width: 80%;
+    height: 15em;
     display: flex;
-    flex-direction: column;
+
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
    margin-top: 3em;
    box-sizing: border-box;
-   height: 15em;
+   margin-bottom: 5em;
+
 }
 
 
