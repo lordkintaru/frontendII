@@ -3,6 +3,7 @@ import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import PrincipalContainer from './components/PrincipalContainer';
+import InfoPage from './pages/InfoPage';
 import fetchDataFromAPI from './services/fetchDataFromAPI';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -12,7 +13,10 @@ function App() {
     <>
       <BrowserRouter>
         <Header fetchData={fetchDataFromAPI}/>
-        <PrincipalContainer/>
+        <PrincipalContainer>
+         <InfoPage fetchData={fetchDataFromAPI}/>
+        </PrincipalContainer>
+    
         <Footer/>
       </BrowserRouter>
   
