@@ -17,4 +17,6 @@ main{
     color: white;
     border-top: 0.2em solid white;
     border-color: white;
+    margin-top: 5em;
+    margin-bottom: 5em;
 }

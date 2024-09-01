@@ -41,7 +41,7 @@ function InfoPage({ fetchData }) {
                         <th>Icon</th>
                         <th>Name</th>
                         <th>Rarity</th>
-                        <th>Element</th>
+                        <th>Vision</th>
                         <th>Weapon</th>
                         <th>Nation</th>
                     </tr>
@@ -53,12 +53,12 @@ function InfoPage({ fetchData }) {
 
                                 return (
                                     <tr>
-                                        <td><img src={`${api.getUri()}${pathName}/${e.id.toLowerCase()}/icon`} alt={e.id}></img></td>
+                                        <td><img src={`${api.getUri()}${pathName}/${e.id.toLowerCase()}/icon`} alt={e.id} className={style.icon}></img></td>
                                         <td>{e.name}</td>
                                         <td>{e.rarity}</td>
-                                        <td>{e.element}</td>
+                                        <td className={style.visionCell}><img src={`${api.getUri()}/elements/${e.vision_key.toLowerCase()}/icon`} alt={e.vision} className={style.vision}></img>{e.vision}</td>
                                         <td>{e.weapon}</td>
-                                        <td>{e.nation}</td>
+                                        <td><img src={`${api.getUri()}/nations/${e.nation.toLowerCase()}/icon`} alt={e.nation} className={style.nation}></img>{e.nation}</td>
                                     </tr>
                                 )
                             })
