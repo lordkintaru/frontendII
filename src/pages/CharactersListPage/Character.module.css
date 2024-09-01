@@ -1,10 +1,10 @@
 .containerCharacters{
     display: flex;
-    flex-direction: column;
+   
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    height: 100%;
+   
     width: 70%;
     box-sizing: border-box;
     color: white;
@@ -40,7 +40,7 @@
 
 .table{
     width:100%;
-    height: 100%;
+
     border:1px solid white;
     border-collapse: collapse;
     text-align: center;
@@ -51,6 +51,7 @@ th, td {
     padding: 8px; /* Adiciona espaçamento interno nas células */
     text-align: middle; /* Alinha o texto à esquerda */
     vertical-align: middle;
+    align-items: center;
   }
   
   thead {
@@ -65,10 +66,3 @@ th, td {
     background-color: #202020; /* Cor de fundo para linhas pares */
   }
 
-.visionCell{
-    display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}

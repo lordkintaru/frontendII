@@ -1,16 +1,17 @@
 main{
     display: flex;
     width: 80%;
+
 }
 .principal{
     padding: 2em 1em 2em 1em;
     display: flex;
-    flex-direction: column;
+
     flex:3;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    height: 100%;
+   
     width: 100%;
     box-sizing: border-box;
     background-color: var(--main-bg-color);

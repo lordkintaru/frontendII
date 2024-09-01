@@ -48,7 +48,9 @@ html{
   background-repeat: no-repeat; /* Não repete a imagem */
   background-attachment: fixed; /* Fixa a imagem */
 }
-
+html, body {
+  height: 100%;
+}
 
 
 

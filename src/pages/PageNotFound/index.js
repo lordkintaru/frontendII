@@ -1,4 +1,5 @@
-import ConteinerText from "../../components/ConteinerText";
+import Conteiner from "../../components/Conteiner";
+import style from './PageNotFound.module.css'
 
 
 function PageNotFound(){
@@ -7,8 +8,9 @@ function PageNotFound(){
 
     return(
         <>
-            <ConteinerText title='Oops! Page Not Found'>It looks like you’re lost! The page you’re looking for doesn’t exist or has been moved.</ConteinerText>
-            <img src='gifNotFound.gif' alt='Paimon Confuse'></img>
+            <Conteiner title='Oops! Page Not Found'>
+                <p>It looks like you’re lost! The page you’re looking for doesn’t exist or has been moved.</p></Conteiner>
+            <img src='gifNotFound.gif' alt='Paimon Confuse' className={style.gifNotFound}></img>
         </>
     )
 }
