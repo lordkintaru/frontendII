@@ -1,0 +1,22 @@
+.conteinerText{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em 2em 1em 2em;
+    box-sizing: border-box;
+    justify-content: space-around;
+    border: 0.1em solid white;
+    margin: 1em;
+}
+.title{
+    font-weight: bolder;
+    font-size: 2em;
+}
+.text{
+    margin: 1em;
+    font-size: 1em;
+
+}

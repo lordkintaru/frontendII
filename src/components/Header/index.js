@@ -13,7 +13,8 @@ function Header({ fetchData }) {
         <header className={style.header}>
             <section>
                 <div>
-                    <img src='../Site-logo.webp' alt='genshin logo' className={style.logo}></img>
+                    <Link to='/'><img src='../Site-logo.webp' alt='genshin logo' className={style.logo}></img>
+                    </Link>
                 </div>
 
                 <MenuNav fetchData={fetchData}/>

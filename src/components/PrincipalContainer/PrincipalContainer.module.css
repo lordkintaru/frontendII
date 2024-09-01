@@ -16,7 +16,7 @@ main{
     background-color: var(--main-bg-color);
     color: white;
     border-top: 0.2em solid white;
-    border-color: white;
+    border-Bottom: 0.2em solid white;
     margin-top: 5em;
     margin-bottom: 5em;
 }
