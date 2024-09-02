@@ -26,10 +26,6 @@ function CharactersListPage({ fetchData }) {
     }, [fetchData, pathName]);
 
 
-    useEffect(() => {
-        console.log(info)
-    }, [info])
-
 
     return (
         <>

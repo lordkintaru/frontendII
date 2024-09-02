@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Conteiner from './components/Conteiner';
 import PageNotFound from './pages/PageNotFound';
 import ElementsPage from './pages/ElementsPage';
+import NationsPage from './pages/NationsPage';
 
 
 
@@ -26,7 +27,7 @@ function App() {
               <Route path='/characters' element={<CharactersListPage fetchData={fetchDataFromAPI}/>}>  </Route>
               <Route path='/*' element={ <PageNotFound/>}></Route>'
               <Route path='/elements' element={<ElementsPage fetchData={fetchDataFromAPI}/>}></Route>
-              
+              <Route path= '/nations' element={<NationsPage fetchData={fetchDataFromAPI}/>}></Route>
             </Routes>
         </PrincipalContainer>
         <Footer/>

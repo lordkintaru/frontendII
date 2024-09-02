@@ -1,0 +1,18 @@
+
+.icon{
+    width: 50%;
+}
+.iconElement{
+    width: 1em;
+    margin: 0.5em;
+}
+.element{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+.informationBox{
+    width: 100%;
+}

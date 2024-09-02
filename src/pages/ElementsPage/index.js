@@ -26,9 +26,6 @@ function ElementsPage({ fetchData }) {
     }, [fetchData, pathName]);
 
 
-    useEffect(() => {
-        console.log(info)
-    }, [info])
 
 
     return (
@@ -44,33 +41,30 @@ function ElementsPage({ fetchData }) {
             {
                 info ? (
                     <Conteiner>
-                        {
-                            info.map(e => {
-                                return (
-                                    <div className={style.element}>
-                                        <img src={`${api.getUri()}${pathName}/${e.id.toLowerCase()}/icon`} alt={e.name} className={style.icon}></img>
+                        {info.map(e => {
+                            return (
+                                <div className={style.element}>
+                                    <img src={`${api.getUri()}${pathName}/${e.id.toLowerCase()}/icon`} alt={e.name} className={style.icon}></img>
 
-                                        <h1>{e.name}</h1>
-                                        <section className={style.reaction}>
-                                            <Conteiner title='Reactions:' >
-                                            {
-                                                e.reactions.map(reaction => {
-                                                    return (
-                                                            <Conteiner>
-                                                                <section className={style.reactionTitle}>
-                                                                    <h1>{reaction.name}</h1>
-                                                                    {reaction.elements.map((i) =>{
-                                                                         return(<img src={`${api.getUri()}${pathName}/${i.toLowerCase()}/icon`} alt={i} className={style.iconsReaction}></img>)
-                                                                    }
-
-                                                                    )}
-                                                                </section>
-                                                                <p>{reaction.description}</p>
-                                                            </Conteiner>
+                                    <h1>{e.name}</h1>
+                                    <section className={style.reaction}>
+                                        <Conteiner title='Reactions:' >
+                                        {
+                                         e.reactions.map(reaction => {
+                                            return (
+                                                <Conteiner>
+                                                    <section className={style.reactionTitle}>
+                                                        <h1>{reaction.name}</h1>
+                                                        {reaction.elements.map((i) =>{
+                                                            return(<img src={`${api.getUri()}${pathName}/${i.toLowerCase()}/icon`} alt={i} className={style.iconsReaction}></img>)
+                                                            })}
+                                                            </section>
+                                                            <p>{reaction.description}</p>
+                                                </Conteiner>
                                                     )
                                                 })
                                             }
-                                            </Conteiner>
+                                        </Conteiner>
                                         </section>
                                     </div>
                                 )

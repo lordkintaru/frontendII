@@ -10,6 +10,7 @@
     justify-content: space-around;
     border: 0.1em solid white;
     margin: 1em;
+    max-width: 100%;
 }
 .title{
     font-weight: bolder;
