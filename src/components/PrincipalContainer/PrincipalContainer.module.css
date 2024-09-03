@@ -11,7 +11,7 @@ main{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-   
+   flex-direction: column;
     width: 100%;
     box-sizing: border-box;
     background-color: var(--main-bg-color);
