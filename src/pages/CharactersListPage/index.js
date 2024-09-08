@@ -57,8 +57,17 @@ function CharactersListPage({ fetchData }) {
                             info ? (
                                 info.map(e => (
                                     <tr key={e.id}>
-                                        <td><img src={`${api.getUri()}${pathName}/${e.id.toLowerCase()}/icon`} alt={e.id} className={style.icon} /></td>
-                                        <td>{e.name}</td>
+                                        <td>
+                                            <Link to={`${pathName}/${e.id.toLowerCase()}`}>
+                                                <img src={`${api.getUri()}${pathName}/${e.id.toLowerCase()}/icon`} alt={e.id} className={style.icon} />
+                                            </Link>
+                                            
+                                        </td>
+                                        <td>
+                                            <Link to={`${pathName}/${e.id.toLowerCase()}`}>
+                                                {e.name}
+                                            </Link>
+                                        </td>
                                         <td>{e.rarity}</td>
                                         <td className={style.visionCell}>
                                             <Link to={`/elements`}>
