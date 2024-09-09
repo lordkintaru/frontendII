@@ -1,0 +1,19 @@
+.containerCharacter{
+    width: 90%;
+    display: flex;
+    padding: 1em;
+
+}
+.imgCharacter{
+    width: 30%;
+    height: 100%;
+    padding: 1em;
+}
+.pElements{
+    display: flex;
+    align-items: center;
+}
+.imgConstellation{
+    width: 50%;
+   
+}

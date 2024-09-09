@@ -70,7 +70,7 @@ function CharactersListPage({ fetchData }) {
                                         </td>
                                         <td>{e.rarity}</td>
                                         <td className={style.visionCell}>
-                                            <Link to={`/elements`}>
+                                            <Link to={`/elements`} >
                                             <img src={`${api.getUri()}/elements/${e.vision_key.toLowerCase()}/icon`} alt={e.vision} className={style.vision} />
                                             </Link>
                                           

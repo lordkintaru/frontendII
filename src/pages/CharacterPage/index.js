@@ -3,7 +3,7 @@ import api from "../../services/api";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Conteiner from "../../components/Conteiner";
-
+import style from './CharacterPage.module.css'
 
 function CharacterPage({ fetchData }) {
 
@@ -36,15 +36,16 @@ function CharacterPage({ fetchData }) {
                 info ? (
                     <>
                         <h1>{info.name}</h1>
-                        <div>
+                        <div className={style.containerCharacter}>
                             <Conteiner>
                                 <p>Title : {info.title}</p>
                                 <p>Rarity : {info.rarity}</p>
 
                                 <Link to='/elements'>
-                                    <p>Vision : {info.vision}
-                                        <img src={`${api.getUri()}/elements/${info.vision_key.toLowerCase()}/icon`} alt={info.vision} />
-                                    </p></Link>
+                                    <p className={style.pElements}>Vision : {info.vision}
+                                        <img src={`${api.getUri()}/elements/${info.vision_key.toLowerCase()}/icon`} alt={info.vision}/>
+                                    </p>
+                                </Link>
 
                                 <p>Weapon : {info.weapon}</p>
                                 <Link to='/nations'><p>Nation : {info.nation}</p></Link>
@@ -52,15 +53,17 @@ function CharacterPage({ fetchData }) {
                                 <p>Gender: {info.gender}</p>
                                 <p>Description : {info.description}</p>
                             </Conteiner>
-                            <img src={`${api.getUri()}${pathName}/card`} alt={`${info.name} card`}></img>
+                            <img src={`${api.getUri()}${pathName}/card`} alt={`${info.name} card`} className={style.imgCharacter} ></img>
                         </div>
 
                         <Conteiner title='Talents'>
-                            <table>
+                            <table className={style.talentsTable}>
+                                
                                 <tr>
                                     <th>Icon</th>
                                     <th>Name</th>
                                     <th>Type</th>
+                                    <th>Description</th>
                                 </tr>
 
 
@@ -86,17 +89,20 @@ function CharacterPage({ fetchData }) {
                                                 <table>
                                                     <tr>
                                                         <td>{e.description}</td>
+                                                        <td>Values</td>
                                                     </tr>
-                                                    {e.upgrades.map(u =>{
+
+                                                    {
+                                                    e.upgrades?.map(u =>{
                                                         return(
                                                             <tr>
                                                                 <td>{u.name}</td>
                                                                 <td>{u.value}</td>
                                                             </tr>
-                                                        )
-                                                    }
-
-                                                    )
+                                                        ) 
+                                                    })
+                                                        
+                                                    
 
                                                     }
                                                 </table>
@@ -134,8 +140,11 @@ function CharacterPage({ fetchData }) {
                             </table>
                         </Conteiner>
                         <Conteiner title='Constellations'>
-                            <h1>{info.constellation}</h1>
-                            <img src={`${api.getUri()}${pathName}/constellation`} alt={info.constellation}></img>
+                            <Conteiner>
+                                <h1>Name: {info.constellation}</h1>
+                                <img src={`${api.getUri()}${pathName}/constellation`} alt={info.constellation} className={style.imgConstellation}></img>
+                            </Conteiner>
+                            
                             <table>
                                 <tr>
                                     <th>Icon</th>
