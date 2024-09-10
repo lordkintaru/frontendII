@@ -8,6 +8,7 @@
     width: 30%;
     height: 100%;
     padding: 1em;
+   
 }
 .pElements{
     display: flex;
@@ -16,4 +17,11 @@
 .imgConstellation{
     width: 50%;
    
+}
+table{
+    width: 100%;
+    box-sizing: border-box;
+}
+table>th{
+    width: 100%;
 }

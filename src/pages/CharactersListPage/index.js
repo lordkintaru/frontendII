@@ -65,7 +65,7 @@ function CharactersListPage({ fetchData }) {
                                         </td>
                                         <td>
                                             <Link to={`${pathName}/${e.id.toLowerCase()}`}>
-                                                {e.name}
+                                                <p>{e.name}</p>
                                             </Link>
                                         </td>
                                         <td>{e.rarity}</td>
@@ -77,8 +77,10 @@ function CharactersListPage({ fetchData }) {
                                         </td>
                                         <td>{e.weapon}</td>
                                         <td>
-                                            <img src={`${api.getUri()}/nations/${e.nation.toLowerCase()}/icon`} alt={e.nation} className={style.nation} />
-                                            {e.nation}
+                                            <Link to={`/nations`}>
+                                                <img src={`${api.getUri()}/nations/${e.nation.toLowerCase()}/icon`} alt={e.nation} className={style.nation} />
+                                                <p>{e.nation}</p>
+                                            </Link>
                                         </td>
                                     </tr>
                                 ))

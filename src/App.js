@@ -11,6 +11,7 @@ import ElementsPage from './pages/ElementsPage';
 import NationsPage from './pages/NationsPage';
 import DomainsPage from './pages/DomainsPage';
 import CharacterPage from './pages/CharacterPage';
+import AboutPage from './pages/AboutPage';
 
 
 
@@ -24,7 +25,7 @@ function App() {
         <Header fetchData={fetchDataFromAPI}/>
         <PrincipalContainer>
             <Routes>
-              <Route path='/' element='404'></Route>'
+              <Route path='/' element={<AboutPage></AboutPage>}></Route>'
               <Route path='/characters' element={<CharactersListPage fetchData={fetchDataFromAPI}/>}>  </Route>
               <Route path='/characters/:id' element={<CharacterPage fetchData={fetchDataFromAPI}/>} ></Route>
               <Route path='/*' element={ <PageNotFound/>}></Route>'

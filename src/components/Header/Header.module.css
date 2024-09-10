@@ -2,7 +2,8 @@ header{
     flex:1;
 }
 .logo{
-    width: 100%;
+    width: 10em;
+    
     margin: 1em 0 2em 0;
     filter: invert(100%) brightness(2);
 }
@@ -19,7 +20,6 @@ header{
     justify-content: center;
    margin-top: 2em;
    box-sizing: border-box;
-   margin-bottom: 5em;
  
    border-bottom: none;
 

@@ -1,12 +1,13 @@
 import style from './MenuNav.module.css'
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 
 function MenuNav({ fetchData }) {
 
+    
     const localization = useLocation();
-
+    /*
     const [types, setTypes] = useState({types: []});
 
     useEffect(() => {
@@ -23,9 +24,10 @@ function MenuNav({ fetchData }) {
         fetchTypes();
     }, [fetchData]);
 
-
+    */
         
     return(
+        /*
         <nav>
             <ul className={style.nav}>
                 {
@@ -38,6 +40,25 @@ function MenuNav({ fetchData }) {
                 }
             </ul>
         </nav>
+        */
+       <nav>
+            <ul className={style.nav}>
+                <li className= { `${localization.pathname === `/` ?style.check: style.borderSlide}`  }>
+                    <Link to='/'>ABOUT</Link>
+                </li>
+                <li className= { `${localization.pathname === `/characters` ?style.check: style.borderSlide}`  }>
+                    <Link to='/characters'>CHARACTERS</Link>
+                </li>
+                <li className= { `${localization.pathname === `/elements` ?style.check: style.borderSlide}`  }>
+                    <Link to='/elements'>ELEMENTS</Link>
+                </li>
+                <li className= { `${localization.pathname === `/nations` ?style.check: style.borderSlide}`  }>
+                    <Link to='/nations'>NATIONS</Link>
+                </li>
+
+
+            </ul>
+       </nav>
       
     )
 }
