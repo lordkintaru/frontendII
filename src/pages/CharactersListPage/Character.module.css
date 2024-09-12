@@ -74,14 +74,11 @@ th, td {
         box-sizing: border-box;
         display: flex;
         align-items: center;
+        margin: 0.5em;
     }
-    .containerCharacters>a>div{
-        width: 100%;
-    
-    }
-
+   
     .icon{
-        width: 120%;
+        width: 100%;
     }
     .containerCharacters{
         width: 100%;
