@@ -48,7 +48,7 @@ function ElementsPage({ fetchData }) {
 
                                     <h1>{e.name}</h1>
                                     <section className={style.reaction}>
-                                        <Conteiner title='Reactions:' >
+                                        
                                         {
                                          e.reactions.map(reaction => {
                                             return (
@@ -64,7 +64,7 @@ function ElementsPage({ fetchData }) {
                                                     )
                                                 })
                                             }
-                                        </Conteiner>
+                                        
                                         </section>
                                     </div>
                                 )

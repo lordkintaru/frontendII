@@ -16,7 +16,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     
+    box-sizing: border-box;
+}
+.reactionTitle>{
+    width: auto;
 }
 .reactionTitle h1{
     font-size: 1.5em;
@@ -31,4 +36,13 @@
 }
 .element h1{
     font-size: 1.5em;
+}
+
+@media (max-width: 800px) {
+    .element{
+        width: 90%;
+    }
+    .reaction{
+        width: 100%;
+    }
 }

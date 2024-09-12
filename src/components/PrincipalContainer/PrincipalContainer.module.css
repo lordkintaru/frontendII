@@ -6,18 +6,27 @@ main{
 .principal{
     padding: 2em 1em 2em 1em;
     display: flex;
-
     flex:3;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
    flex-direction: column;
     width: 100%;
-    box-sizing: border-box;
+
     background-color: var(--main-bg-color);
     color: white;
     border-top: 0.2em solid white;
     border-Bottom: 0.2em solid white;
     margin-top: 5em;
     margin-bottom: 5em;
+}
+@media (max-width: 950px) {
+    main{
+        width: 100vw;
+        padding: 0;
+    }
+    .principal{
+        width: 100%;
+        padding: 0;
+    }
 }

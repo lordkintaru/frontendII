@@ -3,9 +3,13 @@ import { Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import api from '../../services/api';
 import Conteiner from '../../components/Conteiner';
+import { useMediaQuery } from 'react-responsive';
 
 
 function CharactersListPage({ fetchData }) {
+
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
+    const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1224px)' });
     const pathName = useLocation().pathname;
 
     const [info, setInfo] = useState(null);
@@ -38,8 +42,9 @@ function CharactersListPage({ fetchData }) {
                     <p>Loading...</p>
                 )
             }
-
-            <div className={style.containerCharacters}>
+            {
+             isDesktopOrLaptop &&(
+                <div className={style.containerCharacters}>
 
                 <table className={style.table}>
                     <thead>
@@ -65,7 +70,7 @@ function CharactersListPage({ fetchData }) {
                                         </td>
                                         <td>
                                             <Link to={`${pathName}/${e.id.toLowerCase()}`}>
-                                                <p>{e.name}</p>
+                                                <p className={style.name}>{e.name}</p>
                                             </Link>
                                         </td>
                                         <td>{e.rarity}</td>
@@ -79,7 +84,7 @@ function CharactersListPage({ fetchData }) {
                                         <td>
                                             <Link to={`/nations`}>
                                                 <img src={`${api.getUri()}/nations/${e.nation.toLowerCase()}/icon`} alt={e.nation} className={style.nation} />
-                                                <p>{e.nation}</p>
+                                                <p className={style.nationName}>{e.nation}</p>
                                             </Link>
                                         </td>
                                     </tr>
@@ -100,6 +105,34 @@ function CharactersListPage({ fetchData }) {
 
                 </table>
             </div>
+             )
+            }
+            {
+                isTabletOrMobile &&(
+                    <div className={style.containerCharacters}>
+                        {info ? (
+                            info.map(e => (
+                                <>
+                                 <Link to={`${pathName}/${e.id.toLowerCase()}`}>
+                                    <Conteiner>
+                                        <img src={`${api.getUri()}${pathName}/${e.id.toLowerCase()}/icon`} alt={e.id} className={style.icon} />
+          
+                                    </Conteiner>
+                                    <p className={style.name}>{e.name}</p>
+                                </Link>
+                                
+                                </>
+                                    
+                               
+                            ))
+                        ) : (
+                            <p>Loading...</p>
+                        )}
+                    </div>
+                )
+                }
+
+           
             
         </>
         

@@ -5,6 +5,7 @@ html {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 h3{
   margin: 1px;
@@ -62,6 +63,22 @@ a :hover{
   filter: brightness(0.7);
   text-decoration: underline;
 }
+main{
+  box-sizing: border-box;
+}
 
+table {
+  table-layout: fixed;
+  
+}
+th, td {
+  text-align: center; /* Centralizar o conteúdo (opcional) */
+  overflow: hidden; /* Evitar transbordamento de conteúdo */
+  white-space: nowrap; /* Evitar quebra de linha dentro das células */
+}
 
-
+@media (max-width: 950px) {
+  *{
+    font-size: 2vh
+  }
+}

@@ -1,10 +1,8 @@
 .containerCharacters{
     display: flex;
-   
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-   
     width: 70%;
     box-sizing: border-box;
     color: white;
@@ -20,13 +18,13 @@
 
 }
 .nation{
-    width: 3em;
+    width: 80%;
 }
 .vision{
-    width: 3em;
+    width:40%;
 }
 .icon{
-    width: 5em;
+    width: 80%;
     border-radius: 1em;
 }
 .tbody{
@@ -40,11 +38,10 @@
 
 .table{
     width:100%;
-
     border:1px solid white;
     border-collapse: collapse;
     text-align: center;
-
+ 
 }
 th, td {
     border: 1px solid white; /* Define bordas pretas para as células */
@@ -52,6 +49,9 @@ th, td {
     text-align: middle; /* Alinha o texto à esquerda */
     vertical-align: middle;
     align-items: center;
+      white-space: normal; /* Permitir que o texto quebre linhas */
+  word-wrap: break-word; /* Quebrar palavras longas */
+    width: 100%;
   }
   
   thead {
@@ -66,3 +66,36 @@ th, td {
     background-color: #202020; /* Cor de fundo para linhas pares */
   }
 
+@media (max-width: 1224px) {
+    .containerCharacters>a{
+        width: 25%;
+        height: auto;
+        flex-direction: column;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+    }
+    .containerCharacters>a>div{
+        width: 100%;
+    
+    }
+
+    .icon{
+        width: 120%;
+    }
+    .containerCharacters{
+        width: 100%;
+        flex-direction: row;
+    }
+   
+    p{
+        font-size: 10em;
+    }
+   .nationName{
+    box-sizing: border-box;
+    font-size: 0.7em;
+   }
+   .name{
+    font-size: 0.7em;
+   }
+}

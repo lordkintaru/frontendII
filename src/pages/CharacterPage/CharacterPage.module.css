@@ -5,7 +5,7 @@
 
 }
 .imgCharacter{
-    width: 30%;
+    width: 50%;
     height: 100%;
     padding: 1em;
    
@@ -24,4 +24,7 @@ table{
 }
 table>th{
     width: 100%;
+}
+td>img{
+    width: 50%;
 }

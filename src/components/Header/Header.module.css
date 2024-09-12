@@ -3,7 +3,6 @@ header{
 }
 .logo{
     width: 10em;
-    
     margin: 1em 0 2em 0;
     filter: invert(100%) brightness(2);
 }
@@ -20,7 +19,6 @@ header{
     justify-content: center;
    margin-top: 2em;
    box-sizing: border-box;
- 
    border-bottom: none;
 
 
@@ -41,5 +39,11 @@ header{
 }
 
 
-
+@media (max-width: 950px) {
+    .header{
+        width: 100%;
+        height: auto;
+        
+    }
+}
 
