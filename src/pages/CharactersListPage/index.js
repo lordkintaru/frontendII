@@ -111,7 +111,7 @@ function CharactersListPage({ fetchData }) {
                 <Link to={`${pathName}/${e.id.toLowerCase()}`}>
                   <img
                     src={`${api.getUri()}${pathName}/${e.id.toLowerCase()}/icon`}
-                    alt={e.id}
+                    alt={e.id.toLowerCase()}
                     className={style.icon}
                   />
                   <p className={style.name}>{e.name}</p>
