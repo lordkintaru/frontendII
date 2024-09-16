@@ -7,6 +7,8 @@ function MenuNav({ fetchData }) {
 
     
     const localization = useLocation();
+
+    // A maneira de criação do nav automatico usando o fetchdata, porem não  esta sendo ultilizada por conta de nem todas as paginas terem finalizado;
     /*
     const [types, setTypes] = useState({types: []});
 
